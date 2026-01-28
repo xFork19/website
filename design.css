@@ -33,22 +33,58 @@ body{
   background: white;
 }
 
+
 button{
+    background-image: url("IMG_7992.JPEG");
+    background-repeat: no repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
     width:75px;
     height:75px;
     margin:10px;
+    padding: 12px 24px;
+    border: 2px solid black;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
-.slide-btn {
-  padding: 12px 24px;
-  overflow: hidden; 
+.button-wrapper{
+position: relative;
+display: inline-block;
 }
 
-.slide-btn .text {
-  display: inline-block;
-  transition: transform 0.3s ease;
+.button-wrapper .slide-out{
+    position: absolute;
+    top:50%;
+    left:0%;
+    transform: translateX(0px);
+    opacity:0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    z-index:10;
 }
 
-.slide-btn:hover .text {
-  transform: translateX(-10px);
+.button-wrapper:hover .slide-out{
+    transform: translateX(-75px);
+    opacity: 1;
+}
+#equipment{
+
+}
+#skill-tree{
+
+}
+#save-slot{
+
+}
+#achievement{
+  
 }
