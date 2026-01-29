@@ -4,6 +4,7 @@ img{
   border-radius: 5px;
 }
 .bg{
+  background-image: url("bg_main.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,18 +30,15 @@ body{
   height: 400px;
   padding: 20px;
   border: 2px solid black;
-  background: white;
-}
-
-
-button{
-    background-image: url("IMG_7992.JPEG");
-    background-repeat: no repeat;
-    background-position: center;
-    background-size: contain;
+  background: rgba(92, 46, 83, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:5px solid rgb(42, 30, 38);
 }
 
 .main-btn {
+    background-color: transparent; 
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,10 +47,11 @@ button{
     height:75px;
     margin:10px;
     padding: 12px 24px;
-    border: 2px solid black;
     cursor: pointer;
     position: relative;
     z-index: 2;
+    -webkit-text-fill-color: aliceblue;
+    font-weight: bold;
 }
 
 .button-wrapper{
@@ -62,6 +61,7 @@ align-self: flex-end;
 }
 
 .button-wrapper .slide-out{
+  -webkit-text-fill-color: aliceblue;
     position: absolute;
     top:50%;
     left:0%;
@@ -95,16 +95,35 @@ align-self: flex-end;
 }
 
 #equipment{
-
+  background-image: url("Icons/backpack.png");
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 20;
 }
+
 #skill-tree{
+  background-image: url("Icons/skill-tree.png");
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 20;
 
 }
 #save-slot{
+  background-image: url("Icons/save.png");
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 20;
 
 }
-#achievement{
-
+#achievements{
+  background-image: url("Icons/achievements.png");
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 20;
 }
 #spells{
 
