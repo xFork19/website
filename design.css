@@ -1,3 +1,15 @@
+body{
+  font-family: 'Geo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geo-regular-italic {
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 img{
   max-width: 22%;
   max-height: 22%;
@@ -125,19 +137,20 @@ align-self: flex-end;
   background-size: contain;
   z-index: 20;
 }
-#spells{
-
+#equipment-container{
+  display: none;
 }
-#weapons{
-
+#skill-tree-container{
+  display: none;
 }
-#armour{
-
+#save-slot-container{
+  display: none;
 }
-#artifacts{
-
+#achievements-container{
+  display: none;
 }
-.character{
+
+#character{
   width:40px;
   height:40px;
   background-color: red;
