@@ -1,3 +1,4 @@
+const saveSlotContainer = document.getElementById("save-slot-container");
 
 
 if (window.location.pathname.includes("home.html")) {
@@ -17,6 +18,9 @@ document.getElementById("save-slot").addEventListener("click", () =>
 { 
     document.getElementById("save-slot-container").style.display="block";
     document.getElementById("home-containter").style.display="none";
+    saveSlotContainer.style.width="1000px";
+    saveSlotContainer.style.height="700px";
+
 });
 
 document.getElementById("achievements").addEventListener("click", () => 
@@ -28,19 +32,42 @@ document.getElementById("achievements").addEventListener("click", () =>
 const exitButtons = document.getElementsByClassName("exit-btn");
 Array.from(exitButtons).forEach(btn => 
 {btn.addEventListener("click", () => 
-{ window.location.href="home.html"});});
+{
+    document.getElementById("achievements-container").style.display="none";
+    document.getElementById("skill-tree-container").style.display="none";
+    document.getElementById("save-slot-container").style.display="none";
+    document.getElementById("equipment-container").style.display="none";
+    document.getElementById("home-containter").style.display="block";
+});});
 
 }
 
+const player = document.getElementById("spotify-player");
+let isDragging = false;
+let offSetX = 0;
+let offSetY = 0;
 
+player.addEventListener("mousedown", (e) => {
+isDragging = true;
+offSetX = e.clientX - player.getBoundingClientRect().left;
+offSetY = e.clientY - player.getBoundingClientRect().top;
+player.style.cursor = "grabbing";
+});
+window.addEventListener("mouseup", () => {
+isDragging = false;
+player.style.cursor = "grab";
+});
+window.addEventListener("mousemove", (e) => {
+if (!isDragging) return;
+let left = e.clientX - offSetX;
+let top = e.clientY - offSetY;
 
-if (window.location.pathname.includes("save-slot.html")) {
-    const exitButtons = document.getElementsByClassName("exit-btn");
-Array.from(exitButtons).forEach(btn => 
-{btn.addEventListener("click", () => 
-{ window.location.href="home.html"});});
-}
+left = Math.max(0,Math.min(window.innerWidth - player.offsetWidth, left));
+top = Math.max(0,Math.min(window.innerHeight - player.offsetHeight, top));
 
+player.style.left = left + "px";
+player.style.top = top + "px";
+});
 
 
 const character = document.getElementById("character");
