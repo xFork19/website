@@ -55,22 +55,42 @@ document.getElementById("socials").addEventListener("click", () =>
     dropdown.classList.toggle("open");
 });
 
+document.getElementById("github").addEventListener("click", () => 
+{ 
+    window.location.href = "https://github.com/xFork19";
+});
+document.getElementById("linkedin").addEventListener("click", () => 
+{ 
+    window.location.href = "https://www.linkedin.com/in/ayushka-talele";
+});
+document.getElementById("discord").addEventListener("click", () => 
+{ 
+    window.location.href = "https://discord.com/users/797293432372330497";
+});
+document.getElementById("itch").addEventListener("click", () => 
+{ 
+    window.location.href = "https://koolaidxxx.itch.io/";
+});
+
+
 }
 
 const player = document.getElementById("spotify-player");
+const dragBar = document.getElementById("spotify-drag-bar");
+
 let isDragging = false;
 let offSetX = 0;
 let offSetY = 0;
 
-player.addEventListener("mousedown", (e) => {
+dragBar.addEventListener("mousedown", (e) => {
 isDragging = true;
 offSetX = e.clientX - player.getBoundingClientRect().left;
 offSetY = e.clientY - player.getBoundingClientRect().top;
-player.style.cursor = "grabbing";
+dragBar.style.cursor = "grabbing";
 });
 window.addEventListener("mouseup", () => {
 isDragging = false;
-player.style.cursor = "grab";
+dragBar.style.cursor = "grab";
 });
 window.addEventListener("mousemove", (e) => {
 if (!isDragging) return;
