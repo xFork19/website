@@ -19,7 +19,7 @@ body{
 }
 
 img{
-  max-width: 22%;
+  max-width: auto;
   max-height: 22%;
   border-radius: 5px;
 }
@@ -30,7 +30,9 @@ img{
   background-position: center;
 }
 p{
-    color: white
+    color: white;
+    text-align: center;
+    font-size: 18px;
 }
 
 .container{
