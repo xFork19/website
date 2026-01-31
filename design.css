@@ -35,6 +35,10 @@ p{
     font-size: 18px;
 }
 
+button{
+  cursor: pointer;
+}
+
 .container{
 
   display: inline-block;
@@ -66,7 +70,6 @@ p{
     width:100%;
     height:100%;
     padding: 50px;
-    cursor: pointer;
     z-index: 2;
     font-weight: bold;
 }
@@ -82,7 +85,7 @@ align-self: flex-end;
   -webkit-text-fill-color: aliceblue;
     position: absolute;
     top:50%;
-    left:0%;
+    left:25%;
     transform: translateY(0px);
     opacity:0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -91,7 +94,7 @@ align-self: flex-end;
 }
 
 .button-wrapper:hover .slide-out{
-    transform: translateY(-75px);
+    transform: translateY(-125px);
     opacity: 1;
 }
 
@@ -107,9 +110,13 @@ align-self: flex-end;
     background-position: center;
     background-size: contain;
     align-self:flex-start;
-    cursor: pointer;
     z-index: 10;
     border-radius: 5px;
+}
+
+#spotify-player{
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 #spotify-player iframe{
   width:100%;
@@ -145,14 +152,14 @@ align-self: flex-end;
   position: absolute;
   left: 150px;
   bottom: 0px;
-  background-image: url("Icons/skill-tree.png");
+  background-image: url("Icons/scrapbook.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   z-index: 20;
 
 }
-#save-slot{
+#scrapbook{
   position: absolute;
   left: 300px;
   bottom: 0px;
@@ -184,7 +191,7 @@ h1{
 #skill-tree-container{
   display: none;
 }
-#save-slot-container{
+#scrapbook-container{
   align-content: center;
   display: none;
   overflow-y: auto;
@@ -204,4 +211,106 @@ h1{
 
 .sun{
   margin: 5px;
+}
+
+#music-box{
+  position:absolute;
+  padding:50px;
+  right:5px;
+  bottom:5px;
+  width:50px;
+  height:50px;
+  background-image: url("Icons/Trophy.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+}
+
+#socials{
+  position:absolute;
+  padding:50px;
+  top:5px;
+  left:5px;
+  width:50px;
+  height:50px;
+  background-image: url("Icons/Trophy.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+}
+
+#dropdown{
+  top:25%;
+  left:5px;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height:0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+  border-radius: 5px;
+  padding: 0px 10px;
+
+}
+
+#dropdown.open{
+  top:25%;
+  left:5px;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#github{
+  width:75px;
+  height:75px;
+  background-image: url("Icons/GitHub-Logo.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+  padding:20px;
+}
+#linkedin{
+  width: 75px;
+  height:75px;
+  background-image: url("Icons/LinkedIn-Logo.wine.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+  padding:20px;
+}
+
+#discord{
+  width:75px;
+  height:75px;
+  background-image: url("Icons/discord.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+  padding:20px;
+}
+#itch{
+  width:75px;
+  height:75px;
+  background-image: url("Icons/itch-io-logo.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border:none;
+  padding:20px;
 }

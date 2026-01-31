@@ -1,4 +1,4 @@
-const saveSlotContainer = document.getElementById("save-slot-container");
+const scrapbookContainer = document.getElementById("scrapbook-container");
 
 
 if (window.location.pathname.includes("home.html")) {
@@ -14,12 +14,12 @@ document.getElementById("skill-tree").addEventListener("click", () =>
     document.getElementById("home-containter").style.display="none";
 });
 
-document.getElementById("save-slot").addEventListener("click", () => 
+document.getElementById("scrapbook").addEventListener("click", () => 
 { 
-    document.getElementById("save-slot-container").style.display="block";
+    document.getElementById("scrapbook-container").style.display="block";
     document.getElementById("home-containter").style.display="none";
-    saveSlotContainer.style.width="1000px";
-    saveSlotContainer.style.height="700px";
+    scrapbookContainer.style.width="1000px";
+    scrapbookContainer.style.height="700px";
 
 });
 
@@ -35,10 +35,25 @@ Array.from(exitButtons).forEach(btn =>
 {
     document.getElementById("achievements-container").style.display="none";
     document.getElementById("skill-tree-container").style.display="none";
-    document.getElementById("save-slot-container").style.display="none";
+    document.getElementById("scrapbook-container").style.display="none";
     document.getElementById("equipment-container").style.display="none";
     document.getElementById("home-containter").style.display="block";
 });});
+
+document.getElementById("music-box").addEventListener("click", () => 
+{ 
+    if (document.getElementById("spotify-player").style.opacity==1){
+        document.getElementById("spotify-player").style.opacity=0;
+    } else {
+        document.getElementById("spotify-player").style.opacity=1;
+    }
+});
+
+document.getElementById("socials").addEventListener("click", () => 
+{ 
+    const dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("open");
+});
 
 }
 
@@ -339,9 +354,64 @@ const Images = [
     "Green-Images/IMG_0539.JPEG",
     "Green-Images/IMG_0540.JPEG",
     "Green-Images/IMG_0541.JPEG",
+    "Blue-Images/IMG_0019.JPEG",
+    "Blue-Images/IMG_0328.JPEG",
+    "Blue-Images/IMG_0330.JPEG",
+    "Blue-Images/IMG_0335.JPEG",
+    "Blue-Images/IMG_0392.JPEG",
+    "Blue-Images/IMG_0401.JPEG",
+    "Blue-Images/IMG_0436.JPEG",
+    "Blue-Images/IMG_0437.JPEG",
+    "Blue-Images/IMG_0442.JPEG",
+    "Blue-Images/IMG_0445.JPEG",
+    "Blue-Images/IMG_0447.JPEG",
+    "Blue-Images/IMG_0455.JPEG",
+    "Blue-Images/IMG_0460.JPEG",
+    "Blue-Images/IMG_0572.JPEG",
+    "Blue-Images/IMG_0573.JPEG",
+    "Blue-Images/IMG_0577.JPEG",
+    "Blue-Images/IMG_0578.JPEG",
+    "Blue-Images/IMG_0753.JPEG",
+    "Blue-Images/IMG_0754.JPEG",
+    "Blue-Images/IMG_0756.JPEG",
+    "Blue-Images/IMG_2014.JPEG",
+    "Blue-Images/IMG_2022.JPEG",
+    "Blue-Images/IMG_2036.JPEG",
+    "Blue-Images/IMG_2047.JPEG",
+    "Blue-Images/IMG_2109.JPEG",
+    "Blue-Images/IMG_2120.JPEG",
+    "Blue-Images/IMG_2164.JPEG",
+    "Blue-Images/IMG_2194.JPEG",
+    "Blue-Images/IMG_2231.JPEG",
+    "Blue-Images/IMG_3528.JPEG",
+    "Blue-Images/IMG_3556.JPEG",
+    "Blue-Images/IMG_4032.JPEG",
+    "Blue-Images/IMG_5524.JPEG",
+    "Blue-Images/IMG_5526.JPEG",
+    "Blue-Images/IMG_5528.JPEG",
+    "Blue-Images/IMG_6718.JPEG",
+    "Blue-Images/IMG_6719.JPEG",
+    "Blue-Images/IMG_6720.JPEG",
+    "Blue-Images/IMG_6721.JPEG",
+    "Blue-Images/IMG_6723.JPEG",
+    "Blue-Images/IMG_6724.JPEG",
+    "Blue-Images/IMG_6725.JPEG",
+    "Blue-Images/IMG_6726.JPEG",
+    "Blue-Images/IMG_6735.JPEG",
+    "Blue-Images/IMG_6740.JPEG",
+    "Blue-Images/IMG_6742.JPEG",
+    "Blue-Images/IMG_6743.JPEG",
+    "Blue-Images/IMG_6973.JPEG",
+    "Blue-Images/IMG_6974.JPEG",
+    "Blue-Images/IMG_6979.JPEG",
+    "Blue-Images/IMG_6980.JPEG",
+    "Blue-Images/IMG_7120.JPEG",
+    "Blue-Images/IMG_7131.JPEG",
+    "Blue-Images/IMG_8361.JPEG",
+    "Blue-Images/IMG_8362.JPEG",
 
 ];
-const con = document.getElementById("save-slot-container");
+const con = document.getElementById("scrapbook-container");
 Images.forEach(src => {
     const img = document.createElement("img");
     img.src = src;
