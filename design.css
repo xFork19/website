@@ -24,7 +24,7 @@ img{
   border-radius: 5px;
 }
 .bg{
-  background-image: url("bg_main.png");
+  background-image: url("background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -41,10 +41,10 @@ p{
   height: 400px;
   margin: 20px;
   border: 2px solid black;
-  background: rgba(92, 46, 83, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  border:5px solid rgb(42, 30, 38);
+  border:5px solid rgb(0, 53, 62);
 }
 
 #left{
@@ -76,11 +76,12 @@ align-self: flex-end;
 }
 
 .button-wrapper .slide-out{
+  text-align: center;;
   -webkit-text-fill-color: aliceblue;
     position: absolute;
     top:50%;
     left:0%;
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity:0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     white-space: nowrap;
@@ -88,7 +89,7 @@ align-self: flex-end;
 }
 
 .button-wrapper:hover .slide-out{
-    transform: translateX(-75px);
+    transform: translateY(-75px);
     opacity: 1;
 }
 
@@ -112,6 +113,7 @@ align-self: flex-end;
   width:100%;
   height:100%;
   border:none;
+  pointer-events: none;
 }
 
 .spotify-floating{
@@ -130,7 +132,7 @@ align-self: flex-end;
   position: absolute;
   left: 0px;
   bottom: 0px;
-  background-image: url("Icons/backpack.png");
+  background-image: url("Icons/Backpack.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -152,7 +154,7 @@ align-self: flex-end;
   position: absolute;
   left: 300px;
   bottom: 0px;
-  background-image: url("Icons/save.png");
+  background-image: url("Icons/scrapbook.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -163,7 +165,7 @@ align-self: flex-end;
   position: absolute;
   left: 450px;
   bottom: 0px;
-  background-image: url("Icons/achievements.png");
+  background-image: url("Icons/Trophy.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -198,6 +200,6 @@ h1{
   left: 200px;
 }
 
-#sun{
-  margin:5px;
+.sun{
+  margin: 5px;
 }
