@@ -5,19 +5,19 @@ if (window.location.pathname.includes("home.html")) {
 document.getElementById("equipment").addEventListener("click", () => 
 { 
     document.getElementById("equipment-container").style.display="block";
-    document.getElementById("home-containter").style.display="none";
+    document.getElementById("home-container").style.display="none";
 });
 
 document.getElementById("skill-tree").addEventListener("click", () => 
 { 
     document.getElementById("skill-tree-container").style.display="block";
-    document.getElementById("home-containter").style.display="none";
+    document.getElementById("home-container").style.display="none";
 });
 
 document.getElementById("scrapbook").addEventListener("click", () => 
 { 
     document.getElementById("scrapbook-container").style.display="block";
-    document.getElementById("home-containter").style.display="none";
+    document.getElementById("home-container").style.display="none";
     scrapbookContainer.style.width="1000px";
     scrapbookContainer.style.height="700px";
 
@@ -26,7 +26,7 @@ document.getElementById("scrapbook").addEventListener("click", () =>
 document.getElementById("achievements").addEventListener("click", () => 
 { 
     document.getElementById("achievements-container").style.display="block";
-    document.getElementById("home-containter").style.display="none";
+    document.getElementById("home-container").style.display="none";
 });
 
 const exitButtons = document.getElementsByClassName("exit-btn");
@@ -37,7 +37,7 @@ Array.from(exitButtons).forEach(btn =>
     document.getElementById("skill-tree-container").style.display="none";
     document.getElementById("scrapbook-container").style.display="none";
     document.getElementById("equipment-container").style.display="none";
-    document.getElementById("home-containter").style.display="block";
+    document.getElementById("home-container").style.display="block";
 });});
 
 document.getElementById("music-box").addEventListener("click", () => 
