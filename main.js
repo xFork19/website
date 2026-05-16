@@ -1,7 +1,7 @@
 const scrapbookContainer = document.getElementById("scrapbook-container");
 
 
-if (window.location.pathname.includes("home.html")) {
+if (window.location.pathname.includes("index.html")) {
 document.getElementById("equipment").addEventListener("click", () => 
 { 
     document.getElementById("equipment-container").style.display="block";
@@ -113,7 +113,7 @@ const gravity =1;
 let velY = 0;
 x = 200;
 y = 200;
-if (window.location.pathname.includes("home.html")) {
+if (window.location.pathname.includes("index.html")) {
 floorY = window.innerHeight-5 - character.offsetHeight;
 }
 else if (window.location.pathname.includes("equipment.html")) {
@@ -129,7 +129,7 @@ window.addEventListener("keyup", (e) => {
 });
 
 function gameLoop() {
-if (window.location.pathname.includes("home.html")){
+if (window.location.pathname.includes("index.html")){
 
   if ((keys["w"] || keys["arrowup"])&& y === floorY) {
     y -= speed;
@@ -164,6 +164,7 @@ if (window.location.pathname.includes("equipment.html")){
   character.style.top = `${y}px`;
 requestAnimationFrame(gameLoop);
 }
+
 gameLoop();
 const Images = [
     "Pink-Images/IMG_5379.JPEG",
